@@ -4,19 +4,20 @@ import ScrollToTop from './components/ScrollToTop.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import FloatingWhatsApp from './components/FloatingWhatsApp.jsx';
+import DemoBar from './components/DemoBar.jsx';
 
 import HomePage from './pages/HomePage.jsx';
 import ServicesPage from './pages/ServicesPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import BookingPage from './pages/BookingPage.jsx';
 
-const SITE_SUFFIX = ' — Mustafa Öner | MK Digital Systems';
+const SITE_SUFFIX = ' | Mavi Güzellik (Demo)';
 
 const PAGE_TITLES = {
-  '/': `Mavi Güzellik | Web Design Demo${SITE_SUFFIX}`,
-  '/hizmetler': `Hizmetler | Mavi Güzellik${SITE_SUFFIX}`,
-  '/hakkimizda': `Biz Kimiz | Mavi Güzellik${SITE_SUFFIX}`,
-  '/randevu': `Randevu | Mavi Güzellik${SITE_SUFFIX}`,
+  '/': 'Mavi Güzellik — Güzellik Salonu Web Sitesi Demosu | MK Digital Systems',
+  '/hizmetler': `Hizmetler${SITE_SUFFIX}`,
+  '/hakkimizda': `Biz Kimiz${SITE_SUFFIX}`,
+  '/randevu': `Randevu${SITE_SUFFIX}`,
 };
 
 function DocumentTitle() {
@@ -33,7 +34,8 @@ function App() {
     <Router>
       <DocumentTitle />
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
+      <DemoBar />
+      <div className="flex flex-col min-h-screen pt-8">
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Instagram, Facebook, Twitter, Sparkles } from 'lucide-react';
+import { DEMO_CONTACT, MK_HOME } from '@/lib/demo.js';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -65,15 +66,11 @@ function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <a href="tel:+905551234567" className="text-muted-foreground hover:text-primary transition-colors">
-                  +90 555 123 4567
-                </a>
+                <span className="text-muted-foreground">{DEMO_CONTACT.phone}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <a href="mailto:info@maviguzelliksalonu.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  info@maviguzelliksalonu.com
-                </a>
+                <span className="text-muted-foreground">{DEMO_CONTACT.email}</span>
               </li>
             </ul>
           </div>
@@ -88,7 +85,8 @@ function Footer() {
             </div>
           </div>
           <p className="text-center text-sm text-muted-foreground/90">
-            Bu site demo amacıyla hazırlanmıştır — Mavi Güzellik | MK Digital Systems
+            Gerçek bir işletme değildir · Örnek iletişim bilgileri · Tasarım ve geliştirme:{' '}
+            <a href={MK_HOME} className="underline hover:text-primary">MK Digital Systems</a>
           </p>
         </div>
       </div>

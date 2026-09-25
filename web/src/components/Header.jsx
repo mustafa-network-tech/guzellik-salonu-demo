@@ -28,7 +28,7 @@ function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
+        "fixed top-8 w-full z-50 transition-all duration-300",
         scrolled
           ? "bg-gradient-to-r from-purple-900/95 via-purple-700/95 to-purple-900/95 backdrop-blur-md shadow-lg shadow-purple-900/40 py-3"
           : "bg-gradient-to-r from-purple-950 via-purple-800 to-purple-950 shadow-purple-900/40 shadow-md py-5"

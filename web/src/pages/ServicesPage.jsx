@@ -63,6 +63,7 @@ export default function ServicesPage() {
           </h1>
           <p className="text-lg text-muted-foreground">
             Güzelliğinizi ön plana çıkaracak, kendinizi özel hissetmenizi sağlayacak profesyonel bakım seçeneklerimiz.
+            <span className="mt-2 block text-sm">Örnek hizmet ve fiyatlardır.</span>
           </p>
         </motion.div>
 

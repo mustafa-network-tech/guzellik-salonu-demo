@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Clock, MessageCircle, Calendar as CalendarIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { mkWhatsappUrl } from "@/lib/demo.js";
 
 export default function BookingPage() {
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/905551234567", "_blank");
-  };
+  // Demo: the button shows the booking hand-off instead of messaging a fictional salon.
+  const [demoOpen, setDemoOpen] = useState(false);
+  const handleWhatsApp = () => setDemoOpen(true);
 
   return (
     <main className="flex-1 pt-32 pb-24 bg-slate-50 min-h-screen">
@@ -64,6 +65,23 @@ export default function BookingPage() {
               >
                 <MessageCircle className="w-5 h-5 mr-2" /> WhatsApp&apos;tan Yazın
               </Button>
+              {demoOpen && (
+                <div className="mt-4 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm" role="status">
+                  <p className="font-semibold text-emerald-900">Bu bir örnek projedir.</p>
+                  <p className="mt-1 text-emerald-800">
+                    Gerçek bir randevu oluşturulmaz ve mesaj kurgusal salona gitmez. İşletmeniz için benzer bir WhatsApp
+                    randevu akışı hakkında MK Digital Systems ile görüşebilirsiniz.
+                  </p>
+                  <a
+                    href={mkWhatsappUrl("İşletmem için benzer bir WhatsApp randevu akışı hakkında görüşmek istiyorum.")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center rounded-xl bg-emerald-600 px-4 py-2 font-medium text-white hover:bg-emerald-700"
+                  >
+                    WhatsApp’tan MK Digital Systems ile görüşün
+                  </a>
+                </div>
+              )}
             </div>
           </motion.div>
 

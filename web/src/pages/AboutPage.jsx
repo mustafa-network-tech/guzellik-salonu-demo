@@ -122,6 +122,7 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Uzman Kadromuz</h2>
           <p className="text-lg text-muted-foreground">
             Alanında uzman, deneyimli ve güler yüzlü ekibimizle tanışın.
+            <span className="mt-2 block text-sm">Örnek ekip tanıtımıdır; kişiler kurgusaldır.</span>
           </p>
         </div>
 
@@ -160,8 +161,7 @@ export default function AboutPage() {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Müşteri Yorumları</h2>
             <p className="text-lg text-muted-foreground">
-              Salon deneyimini bizimle paylaşan misafirlerimizin gerçek yorumları, ilk randevunuz öncesinde size fikir
-              verebilir.
+              Örnek yorumlardır; gerçek müşteri yorumları değildir. Canlı bir projede işletmenin kendi yorumları yer alır.
             </p>
           </div>
 

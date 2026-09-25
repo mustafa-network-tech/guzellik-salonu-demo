@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Sparkles, Droplets, Scissors, Heart, Star, Calendar, MessageCircle, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -77,6 +77,7 @@ const instagramPhotos = [
 ];
 
 export default function HomePage() {
+  const navigate = useNavigate();
   const [currentImg, setCurrentImg] = useState(0);
 
   useEffect(() => {
@@ -128,7 +129,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 className="h-14 px-10 text-lg rounded-full shadow-xl shadow-emerald-700/30 bg-emerald-500 hover:bg-emerald-500/90 text-white"
-                onClick={() => window.open("https://wa.me/905551234567", "_blank")}
+                onClick={() => navigate("/randevu")}
               >
                 <MessageCircle className="mr-2 w-5 h-5" /> WhatsApp&apos;tan Randevu Al
               </Button>
@@ -227,7 +228,7 @@ export default function HomePage() {
                   </div>
                   <span className="font-bold text-xl">4.9/5</span>
                 </div>
-                <p className="text-sm text-muted-foreground">500+ mutlu müşteri değerlendirmesi</p>
+                <p className="text-sm text-muted-foreground">Örnek değerlendirme alanı</p>
               </div>
             </motion.div>
 
